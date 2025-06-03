@@ -60,9 +60,6 @@ install_blockcast() {
   # If already installed, it typically does nothing.
   bash -c ". <(wget -qO- $DOCKER_INSTALL_URL)"
 
-  # Verify docker & docker compose are now available
-  check_command docker "Visit https://docs.docker.com/get-docker/ to install Docker."
-  check_command "docker compose" # no second arg needed—if missing, instruct to install Docker Compose v2
 
   echo "→ Creating Blockcast directory at '$BLOCKCAST_DIR'…"
   mkdir -p "$BLOCKCAST_DIR"
