@@ -70,7 +70,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - "$port:8080"
+      - "${port}:8080"
 
 EOF
 
