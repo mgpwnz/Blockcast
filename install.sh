@@ -58,7 +58,7 @@ install_blockcast() {
   echo "→ Installing Docker (via official script)…"
   # This will install Docker if not already present.
   # If already installed, it typically does nothing.
-  bash -c ". <(wget -qO- $DOCKER_INSTALL_URL)"
+. <(wget -qO- $DOCKER_INSTALL_URL)"
 
 
   echo "→ Creating Blockcast directory at '$BLOCKCAST_DIR'…"
