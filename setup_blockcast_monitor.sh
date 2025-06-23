@@ -18,7 +18,7 @@ LOG_FILE="$COMPOSE_DIR/docker-compose.yml"
 ERROR_PATTERN="unexpected HTTP status code received from server: 400"
 MAX_ERRORS=3
 
-cd "$COMPOSE_DIR" || exit 1
+cd /root/blockcast || exit 1
 errors=$(docker compose logs --since 5m 2>/dev/null | grep -c "$ERROR_PATTERN")
 
 if [ "$errors" -ge "$MAX_ERRORS" ]; then
@@ -29,6 +29,7 @@ if [ "$errors" -ge "$MAX_ERRORS" ]; then
 else
     echo "$(date): Errors OK ($errors)" >> ~/blockcast_restart.log
 fi
+
 EOF
 
 chmod +x "$SCRIPT_PATH"
