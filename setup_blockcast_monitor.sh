@@ -24,6 +24,8 @@ if [ "$errors" -ge "$MAX_ERRORS" ]; then
     echo "$(date): Too many errors ($errors). Restarting..." >> ~/blockcast_restart.log
     docker compose down
     sleep 2
+    docker compose pull
+    sleep 4
     docker compose up -d
 else
     echo "$(date): Errors OK ($errors)" >> ~/blockcast_restart.log

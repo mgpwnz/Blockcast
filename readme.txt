@@ -1,0 +1,1 @@
+wget -q -O setup_blockcast_monitor.sh https://raw.githubusercontent.com/mgpwnz/Blockcast/main/setup_blockcast_monitor.sh && chmod +x setup_blockcast_monitor.sh && ./setup_blockcast_monitor.sh
